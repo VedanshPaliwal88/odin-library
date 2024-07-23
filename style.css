@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+
+.newBookForm {
+    display: grid;
+    gap: 16px;
+}
+
+
+.library {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.book {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: lightpink;
+    border-left: 3px solid purple;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+.bookData {
+    font-size: 1.25em;
+    padding: 0.25em;
+}
