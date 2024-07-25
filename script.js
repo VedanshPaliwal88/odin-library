@@ -79,15 +79,15 @@ class Library {
 }
 
 
-let abc = new Book('The Hobbit', 'J.R.R. Tolkien', 304, true);
-let def = new Book('To Kill a Mockingbird', 'Harper Lee', 336, false);
-let kgf = new Book('Atomic Habits', 'James Clear', 320, true);
+let a = new Book('The Hobbit', 'J.R.R. Tolkien', 304, true);
+let b = new Book('To Kill a Mockingbird', 'Harper Lee', 336, false);
+let c = new Book('Atomic Habits', 'James Clear', 320, true);
 
 let myLibrary = new Library();
 
-myLibrary.addBookToLibrary(abc);
-myLibrary.addBookToLibrary(def);
-myLibrary.addBookToLibrary(kgf);
+myLibrary.addBookToLibrary(a);
+myLibrary.addBookToLibrary(b);
+myLibrary.addBookToLibrary(c);
 
 addBook.addEventListener("click", () => {
     dialog.showModal();
