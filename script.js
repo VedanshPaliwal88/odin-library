@@ -96,18 +96,13 @@ addBook.addEventListener("click", () => {
     dialog.showModal();
 })
 
-dialog.addEventListener('close', (e) => {
-    const bookInfo = dialog.returnValue.split(',')
-    if(bookInfo === null) console.log(...bookInfo);
-    let book = new Book(...bookInfo);
-    myLibrary.addBookToLibrary(book);
-})
-
 confirmBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (title.validity.valid && author.validity.valid && pages.validity.valid) {
-        let returns = [title.value, author.value, pages.value, isRead.value];
-        dialog.close(returns);
+        let bookInfo = [title.value, author.value, pages.value, isRead.value];
+        let book = new Book(...bookInfo);
+        myLibrary.addBookToLibrary(book);
+        dialog.close();
     } else showError();
 });
 
