@@ -13,18 +13,21 @@
         <button type="button" id="addBook">Add new Book</button>
         <div>
             <dialog>
-                <form id="newBookForm" class="newBookForm">
+                <form id="newBookForm" class="newBookForm" novalidate>
                     <label for="title">Book title: 
-                        <input type="text" name="title" id="title">
+                        <input type="text" name="title" id="title" required>
+                        <span class="error" aria-live="polite"></span>
                     </label>
                     <label for="author">Author: 
-                        <input type="text" name="author" id="author">
+                        <input type="text" name="author" id="author" required>
+                        <span class="error" aria-live="polite"></span>
                     </label>
                     <label for="pages">Number of pages: 
-                        <input type="number" name="pages" id="pages">
+                        <input type="number" name="pages" id="pages" required>
+                        <span class="error" aria-live="polite"></span>
                     </label>
                     <label for="read">Have you read it: 
-                        <input type="radio" name="read" value="true" id="isRead">Yes
+                        <input type="radio" name="read" value="true" id="isRead" checked>Yes
                         <input type="radio" name="read" value="false" id="isNotRead">No
                     </label>
                     <div>
